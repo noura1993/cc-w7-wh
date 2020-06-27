@@ -2,11 +2,13 @@
   <div id="app">
     <h1>Travellos</h1>
     <search-bar></search-bar>
+    <places-list v-model="places"></places-list>
   </div>
 </template>
 
 <script>
 import SearchBar from "./components/SearcBar";
+import PlacesList from "./components/PlacesList";
 import { eventBus } from "./main";
 
 export default {
@@ -24,7 +26,8 @@ export default {
   },
 
   components: {
-    "search-bar": SearchBar
+    "search-bar": SearchBar,
+    "places-list": PlacesList
   }
 };
 </script>
@@ -41,5 +44,6 @@ export default {
 h1 {
   text-align: center;
   color: rgb(13, 94, 13);
+  margin-top: 4%;
 }
 </style>
