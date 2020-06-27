@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Travellos</h1>
     <search-bar></search-bar>
   </div>
 </template>
@@ -29,4 +30,16 @@ export default {
 </script>
 
 <style>
+
+  body {
+  background-image: url("/background.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: cursive;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(13, 94, 13);
+}
 </style>
