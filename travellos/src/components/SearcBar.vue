@@ -28,7 +28,7 @@ export default {
         `https://www.triposo.com/api/20200405/poi.json?location_id=${this.country}&count=50&account=${this.account}&token=${this.api_token}`
       )
         .then(response => response.json())
-        .then(jsonResponse => eventBus.$emit("search-results", jsonResponse));
+        .then(jsonResponse => eventBus.$emit("search-results", jsonResponse.results));
     }
   }
 };
@@ -51,7 +51,6 @@ export default {
   border-radius: 8px;
   width: 25%;
   background: #f1f1f1;
-  /* text-align: center; */
 }
 
 .search-bar button {

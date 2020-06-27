@@ -1,6 +1,6 @@
 <template>
   <div class="places-list">
-    <place-detail v-for="place in places" :key="place"></place-detail>
+    <place-detail v-for="place in places" :key="place" :place="place"></place-detail>
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Travellos</h1>
     <search-bar></search-bar>
-    <places-list v-model="places"></places-list>
+    <places-list :places="places"></places-list>
   </div>
 </template>
 
