@@ -1,12 +1,12 @@
 <template>
   <div class="place">
     <div class="image-container">
-      <img :src="place.images[0].source_url" alt="No image found" />
+      <img :src="place.images[0].source_url" alt="No image found" v-if="place.images.length > 0"/>
+      <img src="/not_found.png" v-else/>
     </div>
-    <h2>{{place.name}}</h2>
-    <div class="place-information">
+    <div clas="place-information">
       <div class="place-price">
-        <p>{{place.price_tier}}</p>
+        <a :href="getPlaceLink(place)" target="_blank"> {{place.name}} </a>
       </div>
       <div class="place-snippet">
         <p>{{place.snippet}}</p>
@@ -18,7 +18,17 @@
 <script>
 export default {
   name: "place-detail",
-  props: ["place"]
+  props: ["place"],
+  methods: {
+      getPlaceLink: function (place) {
+        const result = this.place.attribution.find(attribution => attribution.source_id === "wikipedia");
+        if(result !== undefined) {
+            return result.url;
+        }else {
+            return this.place.attribution[0].url;
+        }
+      }
+  }
 };
 </script>
 
@@ -27,7 +37,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 16.66rem;
+  width: 17rem;
   margin: 0 0.5rem 2.3rem 0.5rem;
 }
 
@@ -60,8 +70,11 @@ export default {
 }
 
 .place-information p {
-  font-size: 0.88rem;
-  font-weight: 300;
-  line-height: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.place-snippet {
+    min-height: 15em;
 }
 </style>

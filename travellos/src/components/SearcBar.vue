@@ -25,7 +25,7 @@ export default {
   methods: {
     searchForCountry: function() {
       fetch(
-        `https://www.triposo.com/api/20200405/poi.json?location_id=${this.country}&count=50&account=${this.account}&token=${this.api_token}`
+        `https://www.triposo.com/api/20200405/poi.json?location_id=${this.country}&count=100&account=${this.account}&token=${this.api_token}`
       )
         .then(response => response.json())
         .then(jsonResponse => eventBus.$emit("search-results", jsonResponse.results));

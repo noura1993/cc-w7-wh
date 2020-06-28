@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <h1>Travellos</h1>
-    <search-bar></search-bar>
+    <div class="top-div">
+      <h1>Travellos</h1>
+      <search-bar></search-bar>
+    </div>
     <places-list :places="places"></places-list>
   </div>
 </template>
@@ -34,16 +36,23 @@ export default {
 
 <style>
 
-  body {
+body {
+  margin: 0;
+  font-family: cursive;
+}
+
+.top-div {
   background-image: url("/background.webp");
   background-size: cover;
   background-attachment: fixed;
-  font-family: cursive;
+  width: 100%;
+  height: 43em;
 }
 
 h1 {
   text-align: center;
   color: rgb(13, 94, 13);
-  margin-top: 4%;
+  margin-top: 0;
+  padding-top: 6%;
 }
 </style>
