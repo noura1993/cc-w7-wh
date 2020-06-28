@@ -51,7 +51,8 @@ body {
 
 h1 {
   text-align: center;
-  color: rgb(13, 94, 13);
+  color: #fff;
+  font-size: 3.5em;
   margin-top: 0;
   padding-top: 6%;
 }
