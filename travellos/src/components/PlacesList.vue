@@ -17,7 +17,7 @@ export default {
   props: ["places"],
   data() {
     return {
-      count: 10
+      count: 20
     };
   },
   methods: {
