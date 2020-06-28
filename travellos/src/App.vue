@@ -46,7 +46,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 43em;
+  height: 80vh;
 }
 
 h1 {
