@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper">
   <div class="search-bar">
-    <input type="text" placeholder="Enter country name..." v-model="country" />
+    <input type="text" placeholder="Enter country name..." v-model="country" v-on:keyup.enter="searchForCountry()"/>
     <button v-on:click="searchForCountry()">
       <i class="fa fa-search"></i>
     </button>
