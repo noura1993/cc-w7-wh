@@ -56,4 +56,11 @@ h1 {
   margin-top: 0;
   padding-top: 6%;
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 </style>
